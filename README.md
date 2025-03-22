@@ -50,8 +50,8 @@ Model.train(cwe_name, 'bigru', 'mpda', i, X_train_all, Y_train_all, X_val, Y_val
 Then go to MPDA.py to set the number of loop experiments.<br />
 Finally run the following command in a terminal.<br />
 ```
-cd ../..                                 #back to project root directory
-python MPDA.py train "./data/cwe" 100    # run!
+cd ../..                                 
+python MPDA.py train "./data/cwe" 100    
 ```
 
 
