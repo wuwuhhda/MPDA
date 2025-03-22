@@ -43,7 +43,10 @@ rm cwe.zip
 
 
 ## Training models
-First set up the relevant runtime settings in mpda_compare.py.<br />
+First set up the relevant runtime settings in mpda_compare.py. For example:<br />
+```
+Model.train(cwe_name, 'bigru', 'mpda', i, X_train_all, Y_train_all, X_val, Y_val, X_test, Y_test, len(Y_train_all))
+```
 Then go to MPDA.py to set the number of loop experiments.<br />
 Finally run the following command in a terminal.<br />
 ```
