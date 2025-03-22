@@ -33,14 +33,22 @@ transformers==4.47.1<br />
   - For comparing the performace of augmented data and raw data in the same data size.
 
 ## Dataset
-The dataset we are using is a collection of 29 vulnerabilities from the Juliet Test Suite dataset. We have provided in the ```./data``` directory. The vulnerability names and number of functions are shown in the following figure. You can find them in the https://github.com/find-sec-bugs/juliet-test-suite.
+The dataset we are using is a collection of 29 vulnerabilities from the Juliet Test Suite dataset. We have provided in the ```./data``` directory. The vulnerability names and number of functions are shown in the following figure. You can find them in the https://github.com/find-sec-bugs/juliet-test-suite. The datasets are compressed and need to be unzipped before training:
+```
+cd data/cwe
+unzip cwe.zip
+rm cwe.zip
+```
+
+
 
 ## Training models
 First set up the relevant runtime settings in mpda_compare.py.<br />
 Then go to MPDA.py to set the number of loop experiments.<br />
 Finally run the following command in a terminal.<br />
 ```
-python MPDA.py train "./data/cwe" 100
+cd ../..                                 #back to project root directory
+python MPDA.py train "./data/cwe" 100    # run!
 ```
 
 
